@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "compass-mixins": "^0.12.10",
+    "dayjs": "^1.10.4",
+    "normalize.css": "^8.0.1",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.1.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "chrome-finder": "^1.0.7",
+    "sass": "^1.32.8",
+    "vite": "^2.0.1",
+    "vite-svg-loader": "^1.4.2"
+  }
+}
