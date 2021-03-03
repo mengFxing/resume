@@ -1,6 +1,6 @@
 <template>
 <p class="last-modified">最后更新于{{buildTime}}</p>
-<a class="download-pdf" href="http://resume.wuhaolin.cn/resume.pdf">下载 PDF</a>
+<a class="download-pdf" href="https://mengfxing.github.io/resume/resume.pdf">下载 PDF</a>
 </template>
 
 <script setup>
