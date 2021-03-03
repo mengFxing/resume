@@ -8,6 +8,9 @@ export default ({ command,mode }) =>{
     plugins: [vue(),svgLoader()],
     define:{
       VITE_APP_TIME: Date.now()
+    },
+    build:{
+      outDir:'docs'
     }
   })
 }
