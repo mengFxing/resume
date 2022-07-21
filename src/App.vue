@@ -78,7 +78,39 @@
         </div>
       </section>
     </div>
-
+    <section class="skill">
+      <header class="section-hd work2-title">
+        <span class="section-title-l"></span>
+        <h2 class="section-title">以往工作</h2>
+        <span class="section-title-r"></span>
+      </header>
+      <div class="content-left">
+        <section class="section-bd">
+          <div class="item" v-for="work in historyWorks2Obj.left" :key="work.name">
+            <header class="item-hd">
+              <h3 class="item-name">{{work.name}}</h3>
+              <span class="item-time">{{work.time}}</span>
+            </header>
+            <div class="item-bd">
+              <MInfo :info="work.infoList"></MInfo>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="content-right">
+        <section class="section-bd">
+          <div class="item" v-for="work in historyWorks2Obj.right" :key="work.name">
+            <header class="item-hd">
+              <h3 class="item-name">{{work.name}}</h3>
+              <span class="item-time">{{work.time}}</span>
+            </header>
+            <div class="item-bd">
+              <MInfo :info="work.infoList"></MInfo>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
     <section class="skill">
       <header class="section-hd">
         <span class="section-title-l"></span>
@@ -89,7 +121,7 @@
         <section class="section-bd">
           <div class="item" v-for="skill in skillObj.left" :key="skill.name">
             <header class="item-hd">
-              <span class="item-time">{{skill.name}}</span>
+              <span class="item-name">{{skill.name}}</span>
             </header>
             <div class="item-bd">
               <MInfo :info="skill.infoList"></MInfo>
@@ -101,7 +133,7 @@
         <section class="section-bd">
           <div class="item" v-for="skill in skillObj.right" :key="skill.name">
             <header class="item-hd">
-              <span class="item-time">{{skill.name}}</span>
+              <span class="item-name">{{skill.name}}</span>
             </header>
             <div class="item-bd">
               <MInfo :info="skill.infoList"></MInfo>
@@ -154,67 +186,139 @@ export default defineComponent({
       ]
     })
     const nowWorkInfo = reactive([{
-      name:'天津星云时代科技有限公司',
-      time:'2018.6 - 至今',
+      name:'零氪科技（天津）有限公司',
+      time: '2021.4 - 至今',
       infoList:[
-        '前端开发工程师',
-        '参与项目有公司官网、网页版直播(tcplayer)、后台管理系统×N、微信小程序×N、nodejs项目×N，具体如下：',
+        '高级前端工程师（大数据技术部）=> 前端负责人',
+        '部门主要业务是医疗大数据，数据从信息采集录入到最终为医疗相关人员使用等一系列处理，方便相关方进行筛查分析使用。',
+        '工作内容主要是前端小伙伴相关需求的研发进行任务拆分，技术支持以及部分复杂需求研发。',
         [
-          '微信小程序(公司主要项目)',
+
+          '基础架构 Vue3 + Less + @vue/cli + typescript + eslint',
+          'UI框架使用的是ant-design-vue@2.X',
+          'Echarts5',
           [
-            '负责开发环境的构建和优化,整体开发流程的优化、项目底层逻辑的编写、难点功能的预研和初稿实现。',
-            '项目特色：',
+            '通过各种维度对数据进行形象的展示',
+            '曾为弄清formatter而阅读过项目源码'
+          ],
+          '@antv/x6',
+          [
+            '需求中数据流类似流程图而选型使用',
+            '曾带着好奇对其底层@antv/g进行过源码阅读，简单了解了其项目结构'
+          ],
+          '一些工具的封装',
+          [
+            'v-tooltip自定义指令',
             [
-              '状态树：内置mp-vuex，api和vuex完全一致。',
-              '使用iconfont字体和svg替换大部分图标,大幅减轻小程序主包大小。',
-              '公用组件由构建工具分发到有需要的分包,减轻小程序主包大小。'
+              '提供类似a-tooltip组件的能力',
+              '内部对文字是否显示省略号做判断'
             ],
-          ],
-          '后台管理系统',
-          [
-            '负责项目的搭建和整体流程研发。统一使用的eslint作为代码格式规范，使用git提供钩子pre-commit做上传前代码规范检查。项目不是同一时期构建所以技术栈会有差异。',
-            '现存技术栈有以下几种：',
+            'v-throttle自定义指令',
             [
-              'Webpack4+Vue2(全家桶)+sass',
-              '@vue/cli+Vue2(全家桶)+sass',
-              'Vite+Vue3(全家桶)+sass',
+              '防止用户连击导致事件多次触发'
             ],
-          ],
-          '资源上传服务(图床)',
-          [
-            '技术栈：egg.js + @vue/cli + Vue2',
-            '无数据库支持，直接使用nodejs和文件交互，支持增、改、查，为了安全不进行删除支持。',
-          ],
-          '日志收集系统',
-          [
-            '技术栈：deno + oak + vite + Vue3(全家桶) + sass + mongodb',
-            '暂未使用，需要等待deno打包成单个可执行文件稳定后投入使用。api采用restfull设计风格。',
-          ],
-          '绘图微服务',
-          [
-            '技术栈：egg.js + canvas + @antv/f2 + mongodb',
-            '起因是小程序canvas绘制分享图不理想，后扩展成了更加通用的绘图微服务，支持简单绘图get传参和复杂绘图post传参。',
-          ],
-          'Wkhtmltopdf项目',
-          [
-            '技术栈：html + js + css + Wkhtmltopdf',
-            '起因是公司有动态制作pdf需求，基于绘制pdf将会交由前端组小伙伴，于是采用了这套技术栈。',
-          ],
-          '公司内部工具集',
-          [
-            '技术栈：deno + typescript',
-            '包含下列功能：',
+            'handle-window页面离开关闭拦截',
             [
-              'Svg生成iconfont样式文件，替代线上iconfont带来的版本维护困难问题。',
-              '创建新页面/组件。支持同时创建多个页面/组件。',
-              'Mock数据。本地起一个服务器，支持指定接口模拟回包数据和代理线上服务。',
-              '小程序代码构建。替代nodejs的工具gulp，作为小程序本地的开发环境。开发时编译速度提升了N倍(N: 同类型文件个数)，做到了真正的最小化改动。(ps:内部公测阶段，等待deno打包成单个可执行文件稳定后gitlab中ci/cd 投入使用)'
+              '原理是利用window.onbeforeunload',
+              '结合vue-router进行路由级别拦截'
+            ],
+            'fetchRequest',
+            [
+              '是模仿axios的封装对fetch进行了封装',
+              'api设计参考了axios',
+              'typescript编写，方便定义发包和回包结构类型',
+              '不支持上传进度(fetch的原因)'
+            ],
+            'tree 组件封装',
+            [
+              '由于业务需求经常用到tree的定制化',
+              'antdv的组件不在满足使用需求',
+              '借鉴antdv设计',
+              '从零开始进行了设计封装, 预留足够自定义能力'
             ]
           ],
-        ]
+          'Docker',
+          [
+            '掌握Docker基本操作',
+            '公司使用docker部署研发测试等环境',
+          ],
+          '涉及技术栈:',
+          [
+            'Vue3',
+            'vite',
+            '@vue/cli',
+            'webpack',
+            'Echarts',
+            'antv',
+            'antdv'
+          ]
+        ],
       ]
     }])
     const historyWorks = reactive([
+      {
+        name:'天津星云时代科技有限公司',
+        time:'2018.6 - 2021.4',
+        infoList:[
+          '前端开发工程师',
+          '参与项目有公司官网、网页版直播(tcplayer)、后台管理系统×N、微信小程序×N、nodejs项目×N，具体如下：',
+          [
+            '微信小程序(公司主要项目)',
+            [
+              '负责开发环境的构建和优化,整体开发流程的优化、项目底层逻辑的编写、难点功能的预研和初稿实现。',
+              '项目特色：',
+              [
+                '状态树：内置mp-vuex，api和vuex完全一致。',
+                '使用iconfont字体和svg替换大部分图标,大幅减轻小程序主包大小。',
+                '公用组件由构建工具分发到有需要的分包,减轻小程序主包大小。'
+              ],
+            ],
+            '后台管理系统',
+            [
+              '负责项目的搭建和整体流程研发。统一使用的eslint作为代码格式规范，使用git提供钩子pre-commit做上传前代码规范检查。项目不是同一时期构建所以技术栈会有差异。',
+              '现存技术栈有以下几种：',
+              [
+                'Webpack4+Vue2(全家桶)+sass',
+                '@vue/cli+Vue2(全家桶)+sass',
+                'Vite+Vue3(全家桶)+sass',
+              ],
+            ],
+            '资源上传服务(图床)',
+            [
+              '技术栈：egg.js + @vue/cli + Vue2',
+              '无数据库支持，直接使用nodejs和文件交互，支持增、改、查，为了安全不进行删除支持。',
+            ],
+            '日志收集系统',
+            [
+              '技术栈：deno + oak + vite + Vue3(全家桶) + sass + mongodb',
+              '暂未使用，需要等待deno打包成单个可执行文件稳定后投入使用。api采用restfull设计风格。',
+            ],
+            '绘图微服务',
+            [
+              '技术栈：egg.js + canvas + @antv/f2 + mongodb',
+              '起因是小程序canvas绘制分享图不理想，后扩展成了更加通用的绘图微服务，支持简单绘图get传参和复杂绘图post传参。',
+            ],
+            'Wkhtmltopdf项目',
+            [
+              '技术栈：html + js + css + Wkhtmltopdf',
+              '起因是公司有动态制作pdf需求，基于绘制pdf将会交由前端组小伙伴，于是采用了这套技术栈。',
+            ],
+            '公司内部工具集',
+            [
+              '技术栈：deno + typescript',
+              '包含下列功能：',
+              [
+                'Svg生成iconfont样式文件，替代线上iconfont带来的版本维护困难问题。',
+                '创建新页面/组件。支持同时创建多个页面/组件。',
+                'Mock数据。本地起一个服务器，支持指定接口模拟回包数据和代理线上服务。',
+                '小程序代码构建。替代nodejs的工具gulp，作为小程序本地的开发环境。开发时编译速度提升了N倍(N: 同类型文件个数)，做到了真正的最小化改动。(ps:内部公测阶段，等待deno打包成单个可执行文件稳定后gitlab中ci/cd 投入使用)'
+              ]
+            ],
+          ]
+        ]
+      },
+    ])
+    const historyWorks2 = reactive([
       {
         name:'网路(天津)电子商务有限公司',
         time:'2017.06 - 2018.05',
@@ -274,6 +378,18 @@ export default defineComponent({
         ]
       }
     ])
+    const historyWorks2Obj = {
+      left:[],
+      right:[]
+    }
+    let splitIndex = 1
+    for(let i = 0; i < historyWorks2.length; i++){
+      if(i < splitIndex){
+        historyWorks2Obj.left.push(historyWorks2[i]) 
+      }else{
+        historyWorks2Obj.right.push(historyWorks2[i]) 
+      }
+    }
     const skillList = [
       {
         name:'Web',
@@ -281,7 +397,7 @@ export default defineComponent({
           '熟悉JS基础语法和知识',
           '掌握最新的ES6+语法',
           '有TypeScript研发经验',
-          '掌握CSS以及预编译语言SCSS',
+          '掌握CSS以及预编译语言SCSS,Less',
         ]
       },
       {
@@ -314,9 +430,16 @@ export default defineComponent({
         ]
       },
       {
+        name:'rust',
+        infoList:[
+          '令我反复入门的一门语言',
+          '看完语法后由于缺乏项目实操，仅是能够进行阅读'
+        ]
+      },
+      {
         name:'微信小程序',
         infoList:[
-          '公司的主要产品',
+          '星云时代的主要产品',
           '熟悉微信小程序的api',
           '有分包研发经验',
           '部分小程序结构和流程由我设计完成'
@@ -333,7 +456,8 @@ export default defineComponent({
         name:'Vite',
         infoList:[
           '内部项目在Vite1.x版本时开始使用',
-          '公司最新web项目均使用vite2.x作为构建工具'
+          '星云时代最新web项目均使用vite2.x作为构建工具',
+          '零氪科技的私有包使用vite作为研发工具'
         ]
       },
       {
@@ -349,13 +473,20 @@ export default defineComponent({
           '使用过mysql，写过简单的增删改查',
           '使用过mongodb, 公司nodejs写的服务均为mongodb'
         ]
-      }
+      },
+      {
+        name:'Echarts',
+        infoList:[
+          '熟悉相关结构和基本概念',
+          '能够尽量还原设计图内容'
+        ]
+      },
     ]
     const skillObj = {
       left:[],
       right:[]
     }
-    const splitIndex = 5
+    splitIndex = 6
     for(let i = 0; i < skillList.length; i++){
       if(i < splitIndex){
         skillObj.left.push(skillList[i]) 
@@ -368,6 +499,7 @@ export default defineComponent({
       baseInfo,
       nowWorkInfo,
       historyWorks,
+      historyWorks2Obj,
       skillObj,
     }
   }

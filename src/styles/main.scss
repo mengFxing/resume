@@ -267,6 +267,11 @@ a {
     height: 32px;
     margin: 10px auto 5px;
     overflow: hidden;
+    &.work2-title{
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
   }
 
   .section-bd {
@@ -330,11 +335,13 @@ a {
     min-height: 30px;
 
     .item-time {
-      display: inline-block;
-      float: left;
-      width: 25%;
+      display: block;
+      float: right;
+      width: 120px;
+      text-align: right;
       @media screen and (max-width: 720px) {
         width: 100%;
+        text-align: left;
         margin-bottom: 5px;
       }
     }
@@ -398,6 +405,7 @@ a {
   .practice {
     .item-time {
       width: 100%;
+      text-align: left;
     }
   }
 }
