@@ -213,11 +213,11 @@ a {
             color: #e8e8e8;
           }
 
-          .contact-link {
-            @media screen and (max-width: 720px) {
-              display: none;
-            }
-          }
+          // .contact-link {
+          //   @media screen and (max-width: 720px) {
+          //     display: none;
+          //   }
+          // }
 
           .iconfont {
             fill: #fff;
@@ -281,6 +281,7 @@ a {
       li {
         margin-top: 8px;
         list-style: square inside;
+        word-break: break-word;
       }
     }
 

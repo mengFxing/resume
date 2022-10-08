@@ -38,7 +38,7 @@
       <section class="practice">
         <header class="section-hd">
           <span class="section-title-l"></span>
-          <h2 class="section-title">当前工作</h2>
+          <h2 class="section-title">最近工作</h2>
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
@@ -169,8 +169,8 @@ export default defineComponent({
       job: 'Web前端开发工程师',
       infoLeft: [
         '男 / 1990.08',
-        '中国地质大学(北京) · 海洋科学',
-        '本科 / 2013年毕业'
+        '中国地质大学（北京） · 海洋科学',
+        '本科 / 统招全日制 / 2013年毕业'
       ],
       infoRight:[
         {
@@ -187,9 +187,10 @@ export default defineComponent({
     })
     const nowWorkInfo = reactive([{
       name:'零氪科技（天津）有限公司',
-      time: '2021.4 - 至今',
+      time: '2021.4 - 2022.9',
       infoList:[
-        '高级前端工程师（大数据技术部）=> 前端负责人',
+        '高级前端工程师',
+        '大数据技术部: 研发转前端负责人',
         '部门主要业务是医疗大数据，数据从信息采集录入到最终为医疗相关人员使用等一系列处理，方便相关方进行筛查分析使用。',
         '工作内容主要是前端小伙伴相关需求的研发进行任务拆分，技术支持以及部分复杂需求研发。',
         [
@@ -226,7 +227,7 @@ export default defineComponent({
             [
               '是模仿axios的封装对fetch进行了封装',
               'api设计参考了axios',
-              'typescript编写，方便定义发包和回包结构类型',
+              'typescript编写，使用泛型，方便定义发包和回包结构类型',
               '不支持上传进度(fetch的原因)'
             ],
             'tree 组件封装',
@@ -261,6 +262,7 @@ export default defineComponent({
         time:'2018.6 - 2021.4',
         infoList:[
           '前端开发工程师',
+          '大前端技术部: 研发转前端负责人',
           '参与项目有公司官网、网页版直播(tcplayer)、后台管理系统×N、微信小程序×N、nodejs项目×N，具体如下：',
           [
             '微信小程序(公司主要项目)',
@@ -301,9 +303,9 @@ export default defineComponent({
             'Wkhtmltopdf项目',
             [
               '技术栈：html + js + css + Wkhtmltopdf',
-              '起因是公司有动态制作pdf需求，基于绘制pdf将会交由前端组小伙伴，于是采用了这套技术栈。',
+              '起因是公司有动态制作pdf需求，基于绘制pdf将会交由前端组小伙伴，经过调研对比采用了这套技术栈。',
             ],
-            '公司内部工具集',
+            '公司内部工具集 / tbox',
             [
               '技术栈：deno + typescript',
               '包含下列功能：',
@@ -375,6 +377,13 @@ export default defineComponent({
               'php/织梦cms'
             ]
           ],
+        ]
+      },
+      {
+        name:'非程序员工作',
+        time:'2013.07 - 2016.04',
+        infoList:[
+          '从事的网络运营，推广相关工作，接触到了公司外包的网络项目，能看到源码，对编程产生了兴趣，期间自学了ps，html，javascript，css，php，Thinkphp'
         ]
       }
     ])

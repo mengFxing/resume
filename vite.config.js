@@ -5,19 +5,19 @@ import vue from '@vitejs/plugin-vue'
 import svgLoader from 'vite-svg-loader'
 import findChrome from 'chrome-finder'
 
-// let outputPath = './'
-// const buildPdf = ()=>{
-//   return {
-//     name:'buildPdf',
-//     closeBundle:()=>{
-//       const chromePath = findChrome();
-//       spawnSync(chromePath, ['--headless', '--disable-gpu', `--print-to-pdf=${path.resolve(outputPath, 'resume.pdf')}`,
-//         'https://mengfxing.github.io/resume/' // 这里注意改成你的在线简历的网站
-//       ]);
+let outputPath = './'
+const buildPdf = ()=>{
+  return {
+    name:'buildPdf',
+    closeBundle:()=>{
+      const chromePath = findChrome();
+      spawnSync(chromePath, ['--headless', '--disable-gpu', `--print-to-pdf=${path.resolve(outputPath, 'resume.pdf')}`,
+        'https://mengfxing.github.io/resume/' // 这里注意改成你的在线简历的网站
+      ]);
       
-//     }
-//   }
-// }
+    }
+  }
+}
 
 // https://vitejs.dev/config/
 export default ({ command,mode }) =>{
