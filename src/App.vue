@@ -31,6 +31,37 @@
     </header>
 
     <div class="content-bd">
+      <section class="skill">
+        <header class="section-hd">
+          <span class="section-title-l"></span>
+          <h2 class="section-title">掌握技能</h2>
+          <span class="section-title-r"></span>
+        </header>
+        <div class="content-left">
+          <section class="section-bd">
+            <div class="item" v-for="skill in skillObj.left" :key="skill.name">
+              <header class="item-hd">
+                <span class="item-name">{{ skill.name }}</span>
+              </header>
+              <div class="item-bd">
+                <MInfo :info="skill.infoList"></MInfo>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="content-right">
+          <section class="section-bd">
+            <div class="item" v-for="skill in skillObj.right" :key="skill.name">
+              <header class="item-hd">
+                <span class="item-name">{{ skill.name }}</span>
+              </header>
+              <div class="item-bd">
+                <MInfo :info="skill.infoList"></MInfo>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
       <div class="content-left">
         <section class="practice">
           <header class="section-hd">
@@ -123,37 +154,7 @@
           </section>
         </div>
       </section>
-      <section class="skill">
-        <header class="section-hd">
-          <span class="section-title-l"></span>
-          <h2 class="section-title">掌握技能</h2>
-          <span class="section-title-r"></span>
-        </header>
-        <div class="content-left">
-          <section class="section-bd">
-            <div class="item" v-for="skill in skillObj.left" :key="skill.name">
-              <header class="item-hd">
-                <span class="item-name">{{ skill.name }}</span>
-              </header>
-              <div class="item-bd">
-                <MInfo :info="skill.infoList"></MInfo>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="content-right">
-          <section class="section-bd">
-            <div class="item" v-for="skill in skillObj.right" :key="skill.name">
-              <header class="item-hd">
-                <span class="item-name">{{ skill.name }}</span>
-              </header>
-              <div class="item-bd">
-                <MInfo :info="skill.infoList"></MInfo>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
+
     </div>
   </main>
 
