@@ -105,6 +105,7 @@ a {
   @media print {
     color: #000;
     background-color: #fff;
+    padding: 0px 30px;
   }
 
   .title {
@@ -240,12 +241,16 @@ a {
   @media screen and (max-width: 720px) {
     padding: 20px 20px 50px;
   }
+  @media print {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
 
   .content-left,
   .content-right {
+    // width: 100%;
     width: 50%;
     @media screen and (max-width: 1024px) {
-      width: 100%;
     }
   }
 
@@ -282,6 +287,9 @@ a {
         margin-top: 8px;
         list-style: square inside;
         word-break: break-word;
+        @media print {
+          margin-top: 5px;
+        }
       }
     }
 
@@ -334,7 +342,9 @@ a {
     overflow: hidden;
     font-weight: 500;
     min-height: 30px;
-
+    @media print {
+      padding: 0 0 0;
+    }
     .item-time {
       display: block;
       float: right;

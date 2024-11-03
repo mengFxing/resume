@@ -29,8 +29,32 @@
         </ul>
       </section>
     </header>
-
     <div class="content-bd">
+      <section>
+        <header class="section-hd">
+          <span class="section-title-l"></span>
+          <h2 class="section-title">个人优势</h2>
+          <span class="section-title-r"></span>
+        </header>
+        <div class="section-bd">
+            <div class="item">
+              <header class="item-hd">
+                <h3 class="item-name">{{ personalAdvantage.name }}</h3>
+              </header>
+              <div class="item-bd">
+                <MInfo
+                  v-for="info in personalAdvantage.infoList"
+                  :key="info.toString()"
+                  :info="info"
+                ></MInfo>
+              </div>
+            </div>
+          </div>
+        <div style="padding-top: 10px;">
+          
+
+        </div>
+      </section>
       <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
@@ -62,7 +86,7 @@
           </section>
         </div>
       </section>
-      <div class="content-left">
+      <div class="">
         <section class="practice">
           <header class="section-hd">
             <span class="section-title-l"></span>
@@ -88,7 +112,7 @@
         </section>
       </div>
 
-      <div class="content-right">
+      <div class="">
         <section class="practice">
           <header class="section-hd">
             <span class="section-title-l"></span>
@@ -114,12 +138,12 @@
         </section>
       </div>
       <section class="skill">
-        <header class="section-hd work2-title">
+        <!-- <header class="section-hd work2-title">
           <span class="section-title-l"></span>
           <h2 class="section-title">以往工作</h2>
           <span class="section-title-r"></span>
-        </header>
-        <div class="content-left">
+        </header> -->
+        <div class="">
           <section class="section-bd">
             <div
               class="item"
@@ -136,7 +160,7 @@
             </div>
           </section>
         </div>
-        <div class="content-right">
+        <div class="">
           <section class="section-bd">
             <div
               class="item"
@@ -154,7 +178,6 @@
           </section>
         </div>
       </section>
-
     </div>
   </main>
 
@@ -198,6 +221,35 @@ export default defineComponent({
         },
       ],
     });
+    const personalAdvantage = reactive({
+        name: '您好！我是一名具有多年前端开发经验的专业工程师。在此，我向您简要介绍一下我的个人优势，希望能为贵公司带来价值。',
+        infoList: [
+          [
+            '专业技能',
+            [
+              '精通HTML、CSS、Javascript/Typescript等前端技术，能够熟练运用前端框架Vue2/3进行项目开发，确保代码的高性能和可维护性',
+              '深入了解前端工程化，数量使用Vite、Webpack、Gulp等构建工具，提高项目开发效率。',
+              '具备多端开发经验：PC、h5、微信小程序，微信公众号等',
+              '具备一定的后端能力，曾编写过node服务、deno服务和php服务。',
+              '掌握前端性能优化、网络优化、SEO优化等技巧，提升用户体验。'
+            ],
+          ],
+          [
+            '领导能力',
+            [
+              '在过往工作中多次获得公司认可，提升为前端负责人，负责团队技术指导，项目规划，功能抽象拆分以及人员培养。',
+              '能够带领团队完成前端开发任务，提升团队整体技术水平和系统稳定性。'
+            ],
+          ],
+          [
+            '解决问题与创新能力',
+            [
+              '面对复杂问题，具备较强的分析和解决问题的能力，能够迅速定位问题并提出有效解决方案。',
+              '关注前端技术发展趋势，不断学习新技术，将创新思维融入项目开发，提升产品竞争力。'
+            ]
+          ]
+        ]
+      })
     const nowWorkInfo = reactive([
       {
         name: "能科科技股份有限公司",
@@ -209,7 +261,7 @@ export default defineComponent({
           "宣传官网：https://www.lexiao.biz",
           [
             "基础框架 Vue3 + Typescript + Vite + vue-router + Pinia + windicss + Less",
-            'UI框架使用ant-design-vue@3.X的二次封装',
+            "UI框架使用ant-design-vue@3.X的二次封装",
             "工作内容：",
             [
               "根据项目特点对前端架构改进，提升团队开发效率、支持业务需求的变化和新增。",
@@ -225,7 +277,7 @@ export default defineComponent({
               "抽象常见页面，提出框架+原子化配置的组合来实现不同的页面。",
               "封装useXXX，针对不同场景进行抽象已简化或优化研发流程。",
               [
-                'useFormBySchemes：支持各种复杂场景的灵活配置的一个表单解决方案',
+                "useFormBySchemes：支持各种复杂场景的灵活配置的一个表单解决方案",
                 "useEvent：一个高效灵活的事件中心。",
                 [
                   "可以作为各种场景的生命周期底层支持。",
@@ -244,7 +296,7 @@ export default defineComponent({
                 "useCopy2Clipboard：复制文字到剪切板。",
                 "useFull：适配三张常见全屏场景，屏幕全屏、窗口内全屏以及相对父级填充全屏。",
                 "useRowSelect：针对选择框在表格分页时的不同需求做封装，使跨页面选中场景开发简化，只需关注数据。",
-                'useLink：为dom布局添加连接线支持。支持@antv/x6 同款连接器（normal：简单连接器，smooth：平滑连接器，rounded：圆角连接器，arch：拱形连接器）'
+                "useLink：为dom布局添加连接线支持。支持@antv/x6 同款连接器（normal：简单连接器，smooth：平滑连接器，rounded：圆角连接器，arch：拱形连接器）",
               ],
               "对常用的组件（例如：表格-Table、对话框-Modal、操作项-Actions等）进行封装。",
             ],
@@ -307,10 +359,9 @@ export default defineComponent({
           ],
         ],
       },
- 
     ]);
     const historyWorks2 = reactive([
-    {
+      {
         name: "天津星云时代科技有限公司",
         time: "2018.6 - 2021.4",
         infoList: [
@@ -536,6 +587,7 @@ export default defineComponent({
 
     return {
       baseInfo,
+      personalAdvantage,
       nowWorkInfo,
       historyWorks,
       historyWorks2Obj,
