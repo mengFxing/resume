@@ -227,9 +227,9 @@ export default defineComponent({
           [
             '专业技能',
             [
-              '精通HTML、CSS、Javascript/Typescript等前端技术，能够熟练运用前端框架Vue2/3进行项目开发，确保代码的高性能和可维护性',
+              '精通HTML、CSS、Javascript/Typescript等前端技术，能够熟练运用前端框架Vue2/3进行项目开发，确保代码的高性能和可维护性。',
               '深入了解前端工程化，数量使用Vite、Webpack、Gulp等构建工具，提高项目开发效率。',
-              '具备多端开发经验：PC、h5、微信小程序，微信公众号等',
+              '具备多端开发经验：PC、H5、微信小程序，微信公众号等。',
               '具备一定的后端能力，曾编写过node服务、deno服务和php服务。',
               '掌握前端性能优化、网络优化、SEO优化等技巧，提升用户体验。'
             ],
