@@ -36,7 +36,7 @@
           <h2 class="section-title">个人优势</h2>
           <span class="section-title-r"></span>
         </header>
-        <div class="section-bd">
+        <div class="section-bd li-top-1">
             <div class="item">
               <header class="item-hd">
                 <h3>{{ personalAdvantage.name }}</h3>
@@ -50,10 +50,6 @@
               </div>
             </div>
           </div>
-        <div style="padding-top: 10px;">
-          
-
-        </div>
       </section>
       <section class="skill">
         <header class="section-hd">
@@ -61,13 +57,13 @@
           <h2 class="section-title">掌握技能</h2>
           <span class="section-title-r"></span>
         </header>
-        <div class="content-left">
+        <div class="content-left ">
           <section class="section-bd">
             <div class="item" v-for="skill in skillObj.left" :key="skill.name">
               <header class="item-hd">
                 <span class="item-name">{{ skill.name }}</span>
               </header>
-              <div class="item-bd">
+              <div class="item-bd li-top-1">
                 <MInfo :info="skill.infoList"></MInfo>
               </div>
             </div>
@@ -222,22 +218,15 @@ export default defineComponent({
       ],
     });
     const personalAdvantage = reactive({
-        name: '您好！我是一名具有10年编程经验的前端开发工程师。在此，我向您简要介绍一下我的个人优势，希望能为贵公司带来价值。',
+        name: '您好！我是一名具有多年前端开发经验的专业工程师。在此，我向您简要介绍一下我的个人优势，希望能为贵公司带来价值。',
         infoList: [
           [
-            '曾在3个公司作为前端负责人，拥有6年带领团队经验。',
-            '具备多端开发经验：PC、H5、微信小程序，微信公众号等。',
-            '参与产品研发，包括toC、toB、服务化等多个方向。',
-            '项目涉及社交、直播、出行、医疗大数据、devops、项目管理、财务管理、AI问答助手等方向。',
-            '精通HTML、CSS、Javascript/Typescript、Vue2/3等前端技术',
-            '深入了解前端工程化，模块化。熟练使用Vite、Webpack、Gulp等构建工具，提高项目开发效率。',
-            '具备一定的后端能力，曾编写过node服务、deno服务和php服务。',
-            '曾使用deno编写构建工具，使得开发热更新从原来的2s+缩减到10ms以内',
-            '掌握前端性能优化、网络优化、SEO优化等技巧，提升用户体验。',
-            '曾改进前端架构，提出原子化编程，极大的提高了代码的可复用性和扩展性。',
-            '主导并参与重点、难点的技术攻坚工作和架构的改进。',
-            '具备良好的项目管理能力，能独当一面负责一个中大型项目的研发流程管理。',
-            '拥有良好的产品思维，可以对业务进行业务抽象。',
+            '10年编程经验，6年带队经验。',
+            'PC、H5、微信小程序，微信公众号等多端开发经验；项目包括toC、toB、服务化等方向，涉及社交、直播、出行、医疗大数据、devops、项目管理、财务管理、AI问答助手等产品。',
+            '精通HTML、CSS、Javascript/Typescript、Vue2/3等前端技术，对前端工程化、模块化有深入了解；熟练使用Vite、Webpack、Gulp等构建工具，提高项目开发效率。',
+            '具备一定的后端能力，编写过node服务、deno服务和php服务；使用deno编写的构建工具，使得开发热更新从原来的2s+缩减到10ms以内。',
+            '改进前端架构，提出原子化编程，极大提高了代码的可复用性和扩展性；主导并参与多个重点、难点的技术攻坚工作和架构的改进；掌握前端性能优化、网络优化、SEO优化等技巧，提升用户体验。',
+            '具备良好的项目管理能力，独当一面负责一个中大型项目的研发流程管理，拥有良好的产品思维，对产品进行业务抽象。',
           ],
         ]
       })
