@@ -37,19 +37,19 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd li-top-1">
-            <div class="item">
-              <header class="item-hd">
-                <h3>{{ personalAdvantage.name }}</h3>
-              </header>
-              <div class="item-bd">
-                <MInfo
-                  v-for="info in personalAdvantage.infoList"
-                  :key="info.toString()"
-                  :info="info"
-                ></MInfo>
-              </div>
+          <div class="item">
+            <header class="item-hd">
+              <h3>{{ personalAdvantage.name }}</h3>
+            </header>
+            <div class="item-bd">
+              <MInfo
+                v-for="info in personalAdvantage.infoList"
+                :key="info.toString()"
+                :info="info"
+              ></MInfo>
             </div>
           </div>
+        </div>
       </section>
       <section class="skill">
         <header class="section-hd">
@@ -57,7 +57,7 @@
           <h2 class="section-title">掌握技能</h2>
           <span class="section-title-r"></span>
         </header>
-        <div class="content-left ">
+        <div class="content-left">
           <section class="section-bd">
             <div class="item" v-for="skill in skillObj.left" :key="skill.name">
               <header class="item-hd">
@@ -218,19 +218,34 @@ export default defineComponent({
       ],
     });
     const personalAdvantage = reactive({
-        name: '您好！我是一名具有多年前端开发经验的专业工程师。在此，我向您简要介绍一下我的个人优势，希望能为贵公司带来价值。',
-        infoList: [
-          [
-            '10年编程经验，6年带队经验。',
-            'PC、H5、微信小程序，微信公众号等多端开发经验；项目包括toC、toB、服务化等方向，涉及社交、直播、出行、医疗大数据、devops、项目管理、财务管理、AI问答助手等产品。',
-            '精通HTML、CSS、Javascript/Typescript、Vue2/3等前端技术，对前端工程化、模块化有深入了解；熟练使用Vite、Webpack、Gulp等构建工具，提高项目开发效率。',
-            '具备一定的后端能力，编写过node服务、deno服务和php服务；使用deno编写的构建工具，使得开发热更新从原来的2s+缩减到10ms以内。',
-            '改进前端架构，提出原子化编程，极大提高了代码的可复用性和扩展性；主导并参与多个重点、难点的技术攻坚工作和架构的改进；掌握前端性能优化、网络优化、SEO优化等技巧，提升用户体验。',
-            '具备良好的项目管理能力，独当一面负责一个中大型项目的研发流程管理，拥有良好的产品思维，对产品进行业务抽象。',
-          ],
-        ]
-      })
+      name: "您好！我是一名具有多年前端开发经验的专业工程师。在此，我向您简要介绍一下我的个人优势，希望能为贵公司带来价值。",
+      infoList: [
+        [
+          "10年编程经验，6年带队经验。",
+          "PC、H5、微信小程序，微信公众号等多端开发经验；项目包括toC、toB、服务化等方向，涉及社交、直播、出行、医疗大数据、devops、项目管理、财务管理、AI问答助手等产品。",
+          "精通HTML、CSS、Javascript/Typescript、Vue2/3等前端技术，对前端工程化、模块化有深入了解；熟练使用Vite、Webpack、Gulp等构建工具，提高项目开发效率。",
+          "具备一定的后端能力，编写过node服务、deno服务和php服务；使用deno编写的构建工具，使得开发热更新从原来的2s+缩减到10ms以内。",
+          "改进前端架构，提出原子化编程，极大提高了代码的可复用性和扩展性；主导并参与多个重点、难点的技术攻坚工作和架构的改进；掌握前端性能优化、网络优化、SEO优化等技巧，提升用户体验。",
+          "具备良好的项目管理能力，独当一面负责一个中大型项目的研发流程管理，拥有良好的产品思维，对产品进行业务抽象。",
+        ],
+      ],
+    });
     const nowWorkInfo = reactive([
+      {
+        name: "儒虎智能科技（北京）有限公司",
+        time: "2025.5 - 至今",
+        infoList: [
+          "前端架构师",
+          "公司承接AI相关软件业务，目前承接的是某上市公司电话客服项目二期：由脑图配置智能客服修改成AI智能客服。",
+          [
+            "工作内容：",
+            [
+              "智能客服对话监控页面设计及编写，包含内容展示：监听对话、AI识别信息等，通话操作：开启监听，关闭监听，保存订单等。",
+              "智能体管理平台功能开发，包含用户管理，角色管理，岗位管理等基础功能，以及核心智能体管理等功能",
+            ],
+          ],
+        ],
+      },
       {
         name: "能科科技股份有限公司",
         time: "2022.11 - 2024.10",
