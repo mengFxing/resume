@@ -1,9 +1,88 @@
-
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
-$font-family: 'Helvetica Neue', Helvetica, Arial, "Microsoft YaHei", sans-serif;
+$font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -11,10 +90,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
 }
-ol,ul{
+ol,
+ul {
   list-style: none;
 }
-hr{
+hr {
   background-color: rgba(102, 102, 102, 0.568);
   border: none;
   height: 1px;
@@ -43,7 +123,7 @@ body {
 a {
   text-decoration: none;
   color: $color-green;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .last-modified {
@@ -128,12 +208,18 @@ a {
       text-align: center;
     }
   }
-
+  .info {
+    width: 60%;
+  }
+  .contact {
+    width: 40%;
+  }
   .name {
     float: left;
 
     h1 {
-      font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
+      font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3",
+        $font-family;
       font-weight: 500;
       letter-spacing: 5px;
       @media screen and (max-width: 720px) {
@@ -206,7 +292,8 @@ a {
           @media print {
             color: #000;
           }
-          font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
+          font-family: "Lucida Grande", "Hiragino Sans GB",
+            "Hiragino Sans GB W3", $font-family;
           font-size: 14px;
           line-height: 22px;
 
@@ -272,7 +359,7 @@ a {
     height: 32px;
     margin: 10px auto 5px;
     overflow: hidden;
-    &.work2-title{
+    &.work2-title {
       @media screen and (max-width: 1024px) {
         display: none;
       }
@@ -292,18 +379,17 @@ a {
         }
       }
     }
-    
+
     .item {
       margin-bottom: 20px;
     }
   }
-  
+
   .li-top-1 {
     li {
       margin-top: 8px !important;
     }
   }
-
 
   .section-title-l,
   .section-title-r {
@@ -413,10 +499,10 @@ a {
       padding: 0 3px;
       background-color: #f6f6f6;
     }
-    .list-style-none{
+    .list-style-none {
       list-style: none;
     }
-    .li-section-content{
+    .li-section-content {
       padding-left: 20px;
     }
   }
